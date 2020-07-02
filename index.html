@@ -19,8 +19,8 @@
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="assets/css/normalize.css">
+  <link rel="stylesheet" href="assets/css/skeleton.css">
 
 
 </head>
@@ -31,15 +31,14 @@
 <main>
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
- <section id="hero" class="hero u-full-width">
-  <div class="container centered">
-    <div class="row">
-      <div class="column" style="margin-top: 25%">
-        <p>Search for a city of your choice and find the weather forecast as well as nearby attractions and activities. Once you've found your destination of choice, you may save your trip!</p>
+  <section id="hero" class="hero u-full-width">
+    <div class="hero-image"></div>
+    <div class="container centered">
+      <div class="twelve columns">
+        <h4>Search for a city of your choice and find the weather forecast as well as nearby attractions and activities. Once you've found your destination of choice, you may save your trip!</h4>
       </div>
     </div>
-  </div>
- </section>
+  </section>
 
  <section>
    <!--  Input for cities to search-->
@@ -68,14 +67,17 @@
  </section>
 
  <section id="cityActivity" class="">
-   <div class="container">
+   <div id="attraction" class="container">
      <div class="row">
        <div class="five columns">
+         <h3>Attractions:</h3>
+          <h6>Powered by<img src="assets/images/yelp logo.jpg"></h6>
          <!--Yelp attraction-->
        </div>
      </div>
-     <div class="row">
+     <div id="description" class="row">
        <div class="four columns">
+         <h3>Description</h3>
         <!--Yelp description-->
        </div>
      </div>

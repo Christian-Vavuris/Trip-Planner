@@ -5,6 +5,9 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
+body, html {
+  height: 100%;
+}
 
 html {
   font-family: sans-serif; /* 1 */
@@ -37,6 +40,7 @@ figcaption,
 figure,
 footer,
 hgroup,
+main,
 menu,
 section,
 summary {
@@ -45,12 +49,23 @@ summary {
 
 header {
   text-align: center;
+  border-style: dotted;
+  background-color: #2F4F4F;
+  color: blanchedalmond;
 }
 
-nav {
-  text-align: right;
-}
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.publicdomainpictures.net/pictures/10000/velka/2185-1268961499zw2b.jpg");
 
+  /* Set a specific height */
+  height: 50%;
+  background-color: gray;
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
 /**
  * 1. Correct `inline-block` display not defined in IE 8/9.
  * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
@@ -213,6 +228,11 @@ sub {
 
 img {
   border: 0;
+}
+
+.container img {
+  width: 50px;
+  height: 30px;
 }
 
 /**
