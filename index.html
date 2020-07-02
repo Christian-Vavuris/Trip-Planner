@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Vacation Planner</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+
+
+</head>
+<body>
+  <header>
+    <h1>Vacation Planner</h1>
+  </header>
+<main>
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+ <section id="hero" class="hero u-full-width">
+  <div class="container centered">
+    <div class="row">
+      <div class="column" style="margin-top: 25%">
+        <p>Search for a city of your choice and find the weather forecast as well as nearby attractions and activities. Once you've found your destination of choice, you may save your trip!</p>
+      </div>
+    </div>
+  </div>
+ </section>
+
+ <section>
+   <!--  Input for cities to search-->
+   <form id="citySearchForm">
+    <label for="cityInput" class="font-weight-bold">Search for a City:</label>
+    <div class="input-group mb-3">
+        <!-- <label for="cityInput" class="font-weight-bold">Search for a City:</label> -->
+        <input type="text" id="cityInput" class="form-control" aria-label="cityInput" aria-describedby="city-input">
+        <div class="input-group-append">
+            <button class="button inverted" type="submit">Get Started</button>
+        </div>
+    </div>
+   </form>
+ </section>
+
+ <!-- weather content-->
+ <section class="twelve columns">
+  <!-- current weather card-->
+  <div id= "curWeatherCard" class="card mb-3">
+    
+  </div>
+  <h4>5-day Forecast:</h4>
+  <div id="dayForcast" class="container-fluid row m-0 p-0">
+
+  </div>
+ </section>
+
+ <section id="cityActivity" class="">
+   <div class="container">
+     <div class="row">
+       <div class="five columns">
+         <!--Yelp attraction-->
+       </div>
+     </div>
+     <div class="row">
+       <div class="four columns">
+        <!--Yelp description-->
+       </div>
+     </div>
+   </div>
+ </section>
+
+ <section id="myTrips" class="help u-full-width featured-bg-image">
+  <h4 class="centered">
+    <button class="button inverted">Save My Trip!</button>
+  </h4>
+</section>
+ 
+</main>
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
