@@ -2,19 +2,16 @@
 var storage = [
   {
     place: "tripName",
-    location: "address",
     date: "newDate",
     desc: "desc"
   },
   {
     place: "tripName",
-    location: "address",
     date: "newDate",
     desc: "desc"
   },
   {
     place: "tripName",
-    location: "address",
     date: "newDate",
     desc: "desc"
   }
@@ -84,7 +81,6 @@ function saveTrip(dest, address) {
     // add lat and lon
     var newDest = {
       place: dest,
-      location: address,
       date: newDate,
       desc: desc
     };
