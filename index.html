@@ -21,6 +21,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="assets/css/normalize.css">
   <link rel="stylesheet" href="assets/css/skeleton.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
 
 
 </head>
@@ -34,13 +35,14 @@
   <section id="hero" class="hero u-full-width">
     <div class="hero-image"></div>
     <div class="container centered">
-      <div class="twelve columns">
+      <div class="twelve columns hero-text">
         <h4>Search for a city of your choice and find the weather forecast as well as nearby attractions and activities. Once you've found your destination of choice, you may save your trip!</h4>
+        <button class="button inverted">Get Started</button>
       </div>
     </div>
   </section>
 
- <section>
+ <section class="search-form">
    <!--  Input for cities to search-->
    <form id="citySearchForm">
     <label for="cityInput" class="font-weight-bold">Search for a City:</label>
@@ -48,7 +50,7 @@
         <!-- <label for="cityInput" class="font-weight-bold">Search for a City:</label> -->
         <input type="text" id="cityInput" class="form-control" aria-label="cityInput" aria-describedby="city-input">
         <div class="input-group-append">
-            <button class="button inverted" type="submit">Get Started</button>
+            <button class="button inverted" type="submit">Search</button>
         </div>
     </div>
    </form>
