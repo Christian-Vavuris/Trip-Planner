@@ -1,5 +1,6 @@
 console.log("what is up team");
 console.log(moment().format('MMMM Do, YYYY'));
+var trips = []
 
 // These are test values for the array until I figure out how to link to Sara's storage
 
@@ -10,7 +11,11 @@ storedTrips = [
         place: "Madrid",
         date: "March 7th, 2021",
         desc: "I'm going to visit the King's Palace"
-
+    },
+    {
+        place: "Budapest",
+        date: "March 10th, 2021",
+        desc: "Lets go to the Club!"
     }
 ]
 
@@ -22,7 +27,7 @@ localStorage.setItem("trips", JSON.stringify(storedTrips));
 // Pull down the Array from local storage or create an empty one
 // Parse the array 
 
-var displayTrips = function () {
+var getTrips = function () {
     var storedTrips = localStorage.getItem("trips");
     let workingArray;
     if (storedTrips === null) {
@@ -31,11 +36,21 @@ var displayTrips = function () {
     else {
         workingArray = JSON.parse(storedTrips)
     }
-    workingArray.push(storedTrips)
-    console.log(workingArray);
+    trips.push(workingArray)
 }
 
-// Display to a card on the HTML Page
+// Display contents of the array to a card on the HTML Page
+
+var displayTrips = function () {
+    for (i=0; i<trips.length; i++) {
+    var cityCard = document.createElement("Div")
+    cityCard.innerHTML = "<h2>" + trips[0].place + "</h2> <h3>" + trips[0].date + "</h3> <h3>" + trips[0].desc + "<h3/>";
+    cityCard.classList.add("city-card")
+    document.getElementById("grid").appendChild(cityCard);
+    }
+}
+
+
 
 
 
@@ -44,4 +59,8 @@ var displayTrips = function () {
 // Push back to local storage with new datees
 
 // testLocalStorageData();
+
+testLocalStorageData();
+getTrips();
 displayTrips();
+console.log(trips);
