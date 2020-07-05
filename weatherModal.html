@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
     <title>Document</title>
 </head>
 <body>
-    <div class="weather-modal">
+    <button id="open">open modal</button>
+
+    <div class="weather-modal" style="display:none">
         <div class="weather-title"></div>
         <div class="weather-content">
-            <img id="icon"/>
             <p id="temp"></p>
-            <p id="temp-min"></p>
+            <img id="icon"/>
             <p id="temp-max"></p>
+            <p id="temp-min"></p>
             <p id="humidity"></p>
             <p id="wind"></p>
         </div>
