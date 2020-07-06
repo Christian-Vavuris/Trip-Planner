@@ -25,6 +25,7 @@
 
 
 </head>
+<style>A {text-decoration: none; color: white;} </style>
 <body>
   <header>
     <h1>Vacation Planner</h1>
@@ -35,14 +36,14 @@
   <section id="hero" class="hero u-full-width">
     <div class="hero-image"></div>
     <div class="container centered">
-      <div class="twelve columns hero-text">
+      <div class="twelve columns hero-text" id="section1">
         <h4>Search for a city of your choice and find the weather forecast as well as nearby attractions and activities. Once you've found your destination of choice, you may save your trip!</h4>
-        <button class="button inverted">Get Started</button>
+        <button class="button inverted"><a href="#section2">Get Started</a></button>
       </div>
     </div>
   </section>
 
- <section class="search-form">
+ <section class="search-form" id="section2">
    <!--  Input for cities to search-->
    <form id="citySearchForm">
     <label for="cityInput" class="font-weight-bold">Search for a City:</label>
@@ -266,6 +267,33 @@
       crossorigin="anonymous"
     ></script>
     <script src="assets/js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        // Add smooth scrolling to all links
+        $("a").on('click', function(event) {
+      
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+      
+            // Store hash
+            var hash = this.hash;
+      
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 800, function(){
+         
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
+            });
+          } // End if
+        });
+      });
+      </script>
   </body>
 </html>
 
