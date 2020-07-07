@@ -4,15 +4,47 @@
   <meta charset="utf-8">
   <title>Returned Searches</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <!-- <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"> -->
   <link rel="stylesheet" href="assets/css/normalize.css">
   <link rel="stylesheet" href="assets/css/skeleton.css">
-  <link rel="stylesheet" href="assets/css/styles.css"> -->
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
+          <label for="city-button">Enter a city</label>
+          <input type="text"  id="city-input" placeholder="City"/>
+          <button id="city-button">add</button>
+          <label for="sort-select">Sort by: </label>
+          <select name="sort-select">
+            <option value="rating-select">Rating</option>
+            <option value="best-match">Most relevant</option>
+            <option value="review-count">Reviews</option>
+          </select>
+          <label for="categories">Categories: </label>
+          <select name="categories">
+            <option value="restaurants">Restaurants</option>
+            <option value="parks">Parks</option>
+            <option value="donuts">Donuts</option>
+          </select>
+          
+
+
+
     <h2>In This city</h2>
     <section>
+      <div>
+        <div class="results row">
+                <h4 class="name">Bj Cinnamon</h4>
+                <img src="https://s3-media2.fl.yelpcdn.com/bphoto/vRwAI59tEyek1muRWoJR5w/o.jpg" class="three cloumns u-max-full-width">
+                <p class="address">26088 Tarragon St</p> 
+                <p class="rating">Rating: 5</p>
+                <p class="review-count">Reviews: 645</p>
+        </div>
+      </div>
+    </section>
+    <section>
         <div id="result-container">
+
+        
 
         </div>
     </section>

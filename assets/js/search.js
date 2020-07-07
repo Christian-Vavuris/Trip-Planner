@@ -8,6 +8,14 @@ var searchCity = function(){
       sort = window.prompt("SORT, this will be replaced by some other menu (please enter one of the following: best_match, rating, review_count)");
       category = window.prompt("See category list in yelp documentation ex. 'donuts' 'hotdogs' 'diners' 'deli' (Enter category)");
 
+      var cityInput = document.getElementById("city-input");
+
+      console.log(cityInput);
+
+
+
+
+
   var APIvar = {
     "async": true,
     "crossDomain": true,
@@ -31,36 +39,26 @@ var searchCity = function(){
     var divEls = document.querySelectorAll(".results");
       for (let x = 0; x < divEls.length; x++) {
         divEls[x].innerHTML = "";
-
         var nameEl = document.createElement("h4");
             nameEl.setAttribute("class","name");
             nameEl.innerHTML = response.businesses[x].name;
             divEls[x].append(nameEl);
-
         var imgEl = document.createElement("img");
             imgEl.setAttribute("src", response.businesses[x].image_url);
+            imgEl.setAttribute("class","u-max-full-width" )
             divEls[x].append(imgEl);
-
-        var phoneEl = document.createElement("p");
-            phoneEl.setAttribute("class","phone");
-            phoneEl.innerHTML = "Phone: " + response.businesses[x].phone;
-            divEls[x].append(phoneEl);
-
+        var addressEl = document.createElement("p");
+            addressEl.setAttribute("class","address");
+            addressEl.innerHTML = response.businesses[x].location.display_address[0];
+            divEls[x].append(addressEl);
         var ratingEl = document.createElement("p");
             ratingEl.setAttribute("class","rating");
             ratingEl.innerHTML = "Rating: " + response.businesses[x].rating;
             divEls[x].append(ratingEl);
-
         var reviewcountEl = document.createElement("p");
             reviewcountEl.setAttribute("class","review-count");
             reviewcountEl.innerHTML = "Reviews: " + response.businesses[x].review_count;
             divEls[x].append(reviewcountEl);
-
-        var priceEl = document.createElement("p");
-            priceEl.setAttribute("class","price");
-            priceEl.innerHTML = "Price: " + response.businesses[x].price
-            divEls[x].append(priceEl);
-
       }
   }); 
 };
