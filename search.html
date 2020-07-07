@@ -10,47 +10,34 @@
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-          <label for="city-button">Enter a city</label>
-          <input type="text"  id="city-input" placeholder="City"/>
-          <button id="city-button">add</button>
-          <label for="sort-select">Sort by: </label>
-          <select name="sort-select">
-            <option value="rating-select">Rating</option>
-            <option value="best-match">Most relevant</option>
-            <option value="review-count">Reviews</option>
-          </select>
-          <label for="categories">Categories: </label>
-          <select name="categories">
-            <option value="restaurants">Restaurants</option>
-            <option value="parks">Parks</option>
-            <option value="donuts">Donuts</option>
-          </select>
-          
+  <label for="city-button">Enter a city</label>
+  <input type="text"  id="city-input" placeholder="City"/>
+  <label for="sort-select">Sort by: </label>
+  <select id="sort-type" name="sort-select">
+    <option value="rating">Rating</option>
+    <option value="best_match">Most relevant</option>
+    <option value="review_count">Reviews</option>
+  </select>
+  <label for="categories">Categories: </label>
+  <select id="category" name="categories">
+    <option value="restaurants">Restaurants</option>
+    <option value="parks">Parks</option>
+    <option value="donuts">Donuts</option>
+  </select>
+  <button id="search-button">Search</button>
 
+  <h2 id="results"></h2>
+  <section>
+    <div>
+      <div class="results row"></div>
+    </div>
+  </section>
+  <section>
+    <div id="result-container"></div>
+  </section>
 
-
-    <h2>In This city</h2>
-    <section>
-      <div>
-        <div class="results row">
-                <h4 class="name">Bj Cinnamon</h4>
-                <img src="https://s3-media2.fl.yelpcdn.com/bphoto/vRwAI59tEyek1muRWoJR5w/o.jpg" class="three cloumns u-max-full-width">
-                <p class="address">26088 Tarragon St</p> 
-                <p class="rating">Rating: 5</p>
-                <p class="review-count">Reviews: 645</p>
-        </div>
-      </div>
-    </section>
-    <section>
-        <div id="result-container">
-
-        
-
-        </div>
-    </section>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="assets/js/search.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="assets/js/search.js"></script>
 </body>
 </html>
