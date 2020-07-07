@@ -1,17 +1,9 @@
 
 header {
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    letter-spacing: 2px;
-    word-spacing: 2px;
     color: #000000;
     font-weight: 700;
-    text-decoration: overline solid rgb(68, 68, 68);
-    font-style: normal;
-    font-variant: small-caps;
-    text-transform: capitalize;
+    font-style: bold;
     text-align: center;
-    border-style: ridge;
-    color: #778899;
   }
   
   /*Hero Content*/
