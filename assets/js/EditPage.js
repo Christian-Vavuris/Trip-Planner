@@ -16,6 +16,11 @@ storedTrips = [
         place: "Budapest",
         date: "March 10th, 2021",
         desc: "Lets go to the Club!"
+    },
+    {
+        place: "Stockholm",
+        date: "March 14th, 2021",
+        desc: "I've always wanted to try pickled herring"
     }
 ]
 
@@ -36,7 +41,7 @@ var getTrips = function () {
     else {
         workingArray = JSON.parse(storedTrips)
     }
-    trips.push(workingArray)
+    trips = workingArray
 }
 
 // Display contents of the array to a card on the HTML Page
@@ -44,7 +49,7 @@ var getTrips = function () {
 var displayTrips = function () {
     for (i=0; i<trips.length; i++) {
     var cityCard = document.createElement("Div")
-    cityCard.innerHTML = "<h2>" + trips[0].place + "</h2> <h3>" + trips[0].date + "</h3> <h3>" + trips[0].desc + "<h3/>";
+    cityCard.innerHTML = "<h2>" + trips[i].place + "</h2> <h3>" + trips[i].date + "</h3> <h3>" + trips[i].desc + "<h3/>";
     cityCard.classList.add("city-card")
     document.getElementById("grid").appendChild(cityCard);
     }
