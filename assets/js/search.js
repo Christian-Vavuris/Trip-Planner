@@ -22,12 +22,17 @@ var searchCity = function(){
   }
 
   console.log(APIvar);
+  var resultContainer = document.getElementById("results");
+  resultContainer.textContent = "Results";
+  var loading = document.createElement("div");
+  loading.className = "loader";
+  resultContainer.append(loading);
+
 
   // call the API
   $.ajax(APIvar).done(function (response) {
     console.log(response);
-
-    document.getElementById("results").textContent = "Results";
+    resultContainer.removeChild(loading);
 
     // create the info
     var containerEl = document.getElementById("result-container");
