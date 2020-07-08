@@ -43,64 +43,66 @@ function createTrip() {
 }
 
 function modalInfo(dest) {
-  // if($('.modal-content').innerHTML !== "") {
-  //   $('.modal-content').innerHTML = "";
-  // }
+  if($('.modal-content')) {
+    $('.modal-content').remove();
+  }
+
   var name = dest.children[0].textContent;
   var address = dest.children[2].textContent;
-  // var content = $('.modal-content');
-  // var header = $('<div>').addClass('modal-header');
-  // var title = $('<h2>')
-  //   .text(name)
-  //   .attr('id', 'title');
-  // var close = $('<button>')
-  //   .text('&times;')
-  //   .attr('id', 'close');
-  // header.append(title);
-  // header.append(close);
-  // content.append(header);
+  var content = $('<div>').addClass('modal-content');
+  $('.modal').append(content);
+  var header = $('<div>').addClass('modal-header');
+  var title = $('<h2>')
+    .text(name)
+    .attr('id', 'title');
+  var close = $('<button>')
+    .text('X')
+    .attr('id', 'close');
+  header.append(title);
+  header.append(close);
+  content.append(header);
 
-  // var chooseLabel = $('<label>')
-  //   .text('Choose a trip:')
-  //   .attr('for', 'my-trips');
-  // var selectTrip = $('<select>')
-  //   .attr('name', 'my-trips')
-  //   .attr('id', 'trips');
-  // content.append(chooseLabel);
-  // content.append(selectTrip);
+  var chooseLabel = $('<label>')
+    .text('Choose a trip:')
+    .attr('for', 'my-trips');
+  var selectTrip = $('<select>')
+    .attr('name', 'my-trips')
+    .attr('id', 'trips');
+  content.append(chooseLabel);
+  content.append(selectTrip);
 
-  // var createLabel = $('<label>')
-  //   .attr('for', 'create-btn')
-  //   .text('Create a New Trip:');
-  // var createInput = $('<input>')
-  //   .attr('type', 'text')
-  //   .attr('id', 'create')
-  //   .attr('placeholder', 'New Trip');
-  // var createBtn = $('<button>')
-  //   .attr('id', 'create-btn')
-  //   .text('Create');
-  // content.append(createLabel);
-  // content.append(createInput);
-  // content.append(createBtn);
+  var createLabel = $('<label>')
+    .attr('for', 'create-btn')
+    .text('Create a New Trip:');
+  var createInput = $('<input>')
+    .attr('type', 'text')
+    .attr('id', 'create')
+    .attr('placeholder', 'New Trip');
+  var createBtn = $('<button>')
+    .attr('id', 'create-btn')
+    .text('Create');
+  content.append(createLabel);
+  content.append(createInput);
+  content.append(createBtn);
 
-  // var dateLabel = $('<label>')
-  //   .attr('for', 'date')
-  //   .text('Date:');
-  // var dateInput = $('<input>')
-  //   .attr('type', 'text')
-  //   .attr('id', 'date')
-  //   .attr('placeholder', 'MM/DD/YYYY')
-  //   .attr('autocomplete', 'off');
-  // content.append(dateLabel);
-  // content.append(dateInput);
+  var dateLabel = $('<label>')
+    .attr('for', 'date')
+    .text('Date:');
+  var dateInput = $('<input>')
+    .attr('type', 'text')
+    .attr('id', 'date')
+    .attr('placeholder', 'MM/DD/YYYY')
+    .attr('autocomplete', 'off');
+  content.append(dateLabel);
+  content.append(dateInput);
 
-  // var descLabel = $('<label>')
-  //   .attr('for', 'description')
-  //   .text('Add a Description:');
-  // var desc = $('<textarea>')
-  //   .attr('id', 'description');
-  // content.append(descLabel);
-  // content.append(desc);
+  var descLabel = $('<label>')
+    .attr('for', 'description')
+    .text('Add a Description:');
+  var desc = $('<textarea>')
+    .attr('id', 'description');
+  content.append(descLabel);
+  content.append(desc);
 
   $('#create-btn').on('click', function() {
     createTrip();
@@ -113,10 +115,10 @@ function modalInfo(dest) {
     trips.prepend(option);
   }
 
-  // var save = $('<button>')
-  //   .text('Save')
-  //   .attr('id', 'save');
-  // content.append(save);
+  var save = $('<button>')
+    .text('Save')
+    .attr('id', 'save');
+  content.append(save);
 
   $("#date").datepicker({
     minDate: 1
