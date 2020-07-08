@@ -4,21 +4,40 @@
   <meta charset="utf-8">
   <title>Returned Searches</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <!-- <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"> -->
   <link rel="stylesheet" href="assets/css/normalize.css">
   <link rel="stylesheet" href="assets/css/skeleton.css">
-  <link rel="stylesheet" href="assets/css/styles.css"> -->
+  <link rel="stylesheet" href="assets/css/search.css">
 </head>
 <body>
-    <h2>In This city</h2>
-    <section>
-        <div id="result-container">
+  <label for="city-button">Enter a city</label>
+  <input type="text"  id="city-input" placeholder="City"/>
+  <label for="sort-select">Sort by: </label>
+  <select id="sort-type" name="sort-select">
+    <option value="rating">Rating</option>
+    <option value="best_match">Most relevant</option>
+    <option value="review_count">Reviews</option>
+  </select>
+  <label for="categories">Categories: </label>
+  <select id="category" name="categories">
+    <option value="restaurants">Restaurants</option>
+    <option value="parks">Parks</option>
+    <option value="donuts">Donuts</option>
+  </select>
+  <button id="search-button">Search</button>
 
-        </div>
-    </section>
+  <h2 id="results"></h2>
+  <section>
+    <div>
+      <div class="results row"></div>
+    </div>
+  </section>
+  <section>
+    <div id="result-container"></div>
+  </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="assets/js/search.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="assets/js/search.js"></script>
 </body>
 </html>
