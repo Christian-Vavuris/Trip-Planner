@@ -49,7 +49,7 @@ var getTrips = function () {
 var displayTrips = function () {
     for (i=0; i<trips.length; i++) {
     var cityCard = document.createElement("Div")
-    cityCard.innerHTML = "<h2>" + trips[i].place + "</h2> <input class='date-button' placeholder="+ trips[i].date + "></input> <h3>" + trips[i].desc + "<h3/>";
+    cityCard.innerHTML = "<h2>" + trips[i].place + "</h2> <input class='date-button' placeholder="+ trips[i].date + "></input> <h3>" + trips[i].desc + "<h3/><button class='open'>Weather</button>";
     cityCard.classList.add("city-card")
     document.getElementById("grid").appendChild(cityCard);
     }

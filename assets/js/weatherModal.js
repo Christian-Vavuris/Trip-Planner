@@ -35,5 +35,5 @@ function weatherInfo(data) {
     $('#wind').text(`Wind Speed: ${data.wind.speed} MPH`);
 }
 
-$('#close').on('click', closeModal);
-$('#open').on('click', openModal);
+$('.close').on('click', closeModal);
+$('.open').on('click', openModal);
