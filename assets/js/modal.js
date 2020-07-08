@@ -18,7 +18,6 @@ var storage = [
 ];
 
 function openModal() {
-  console.log(this.children);
   // open the modal
   $('.modal').css('display', 'block');
 
@@ -44,25 +43,80 @@ function createTrip() {
 }
 
 function modalInfo(dest) {
-  // trip is a html element
-    // parse into needed info
-    var name = dest.children[0].textContent;
-    var address = dest.children[2].textContent;
-    console.log(address)
+  // if($('.modal-content').innerHTML !== "") {
+  //   $('.modal-content').innerHTML = "";
+  // }
+  var name = dest.children[0].textContent;
+  var address = dest.children[2].textContent;
+  // var content = $('.modal-content');
+  // var header = $('<div>').addClass('modal-header');
+  // var title = $('<h2>')
+  //   .text(name)
+  //   .attr('id', 'title');
+  // var close = $('<button>')
+  //   .text('&times;')
+  //   .attr('id', 'close');
+  // header.append(title);
+  // header.append(close);
+  // content.append(header);
 
-  // set the business info
+  // var chooseLabel = $('<label>')
+  //   .text('Choose a trip:')
+  //   .attr('for', 'my-trips');
+  // var selectTrip = $('<select>')
+  //   .attr('name', 'my-trips')
+  //   .attr('id', 'trips');
+  // content.append(chooseLabel);
+  // content.append(selectTrip);
 
-  $('#title').text(name);
+  // var createLabel = $('<label>')
+  //   .attr('for', 'create-btn')
+  //   .text('Create a New Trip:');
+  // var createInput = $('<input>')
+  //   .attr('type', 'text')
+  //   .attr('id', 'create')
+  //   .attr('placeholder', 'New Trip');
+  // var createBtn = $('<button>')
+  //   .attr('id', 'create-btn')
+  //   .text('Create');
+  // content.append(createLabel);
+  // content.append(createInput);
+  // content.append(createBtn);
+
+  // var dateLabel = $('<label>')
+  //   .attr('for', 'date')
+  //   .text('Date:');
+  // var dateInput = $('<input>')
+  //   .attr('type', 'text')
+  //   .attr('id', 'date')
+  //   .attr('placeholder', 'MM/DD/YYYY')
+  //   .attr('autocomplete', 'off');
+  // content.append(dateLabel);
+  // content.append(dateInput);
+
+  // var descLabel = $('<label>')
+  //   .attr('for', 'description')
+  //   .text('Add a Description:');
+  // var desc = $('<textarea>')
+  //   .attr('id', 'description');
+  // content.append(descLabel);
+  // content.append(desc);
+
   $('#create-btn').on('click', function() {
     createTrip();
   });
   var trips = $('#trips');
   for(var i = 0; i < localStorage.length; i++) {
     var option = $('<option>')
-        .text(localStorage.key(i))
-        .attr('value', localStorage.key(i));
+      .text(localStorage.key(i))
+      .attr('value', localStorage.key(i));
     trips.prepend(option);
   }
+
+  // var save = $('<button>')
+  //   .text('Save')
+  //   .attr('id', 'save');
+  // content.append(save);
 
   $("#date").datepicker({
     minDate: 1
