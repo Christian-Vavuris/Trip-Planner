@@ -14,7 +14,6 @@ else {
 }
 
 $('.trip').on('click', function(event) {
-    // event.stopImmediatePropagation();
-    // call a function in EditPage.js
-        // pass `this`
+    window.location.href = "./EditPage.html";
+    getTrips(this);
 })
