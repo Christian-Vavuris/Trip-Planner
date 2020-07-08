@@ -13,7 +13,6 @@ else {
     
 }
 
-$('.trip').on('click', function(event) {
-    window.location.href = "./EditPage.html";
-    getTrips(this);
+$('.trip').on('click', function() {
+    window.location.href = "./EditPage.html?" + this.textContent;
 })
