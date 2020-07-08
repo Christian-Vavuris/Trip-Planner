@@ -5,17 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Your Trips</title>
     <link rel="stylesheet" href="assets/css/EditPage.css">
+    <link rel="stylesheet" href="./assets/css/modalstyles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
 </head>
 <body>
-    <h1 id="text">This is the edit trips page!</h1>
+    <h1 id="text">Oh the places You'll Go!</h1>
     <article class="containter grid-container" id="grid">
 
     </article>
+
+    <div class="modal" style="display:none">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button id="close" class="close">&times;</button>
+                <h2 id="title"></h2>
+            </div>
+            <p id="temp"></p>
+            <img id="icon"/>
+            <p id="temp-max"></p>
+            <p id="temp-min"></p>
+            <p id="humidity"></p>
+            <p id="wind"></p>
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="assets/js/EditPage.js"></script>
+    <script src="./assets/js/weatherModal.js"></script>
 </body>
 </html
