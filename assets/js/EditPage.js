@@ -4,7 +4,6 @@ var trips = []
 
 // These are test values for the array until I figure out how to link to Sara's storage
 
-
 var testLocalStorageData = function () {
 storedTrips = [
     {
