@@ -49,17 +49,20 @@ var getTrips = function () {
 var displayTrips = function () {
     for (i=0; i<trips.length; i++) {
     var cityCard = document.createElement("Div")
-    cityCard.innerHTML = "<h2>" + trips[i].place + "</h2> <h3>" + trips[i].date + "</h3> <h3>" + trips[i].desc + "<h3/>";
+    cityCard.innerHTML = "<h2>" + trips[i].place + "</h2> <button class='date-button'>" + trips[i].date + "</button> <h3>" + trips[i].desc + "<h3/>";
     cityCard.classList.add("city-card")
     document.getElementById("grid").appendChild(cityCard);
     }
 }
 
 
-
-
-
 // Edit the dates and save them to the array
+
+var changeDate = function() {
+    $(".date-button").datepicker();
+    console.log("foo");
+
+}
 
 // Push back to local storage with new datees
 
@@ -69,3 +72,4 @@ testLocalStorageData();
 getTrips();
 displayTrips();
 console.log(trips);
+$(".date-button").on('click', changeDate);
