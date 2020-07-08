@@ -1,6 +1,7 @@
 
 header {
-    color: #000000;
+    color: #ffffff;
+    background-color: hsl(204, 27%, 59%);
     font-weight: 700;
     font-style: bold;
     padding: 20px 35px;
@@ -33,11 +34,11 @@ header nav ul li {
 header nav ul li a {
   padding: 10px 15px;
   font-size: 1.55vw;
+  color: white;
 }
 
 header nav ul li a:hover {
-  box-shadow: inset 0 -40px 0 -1px gray;
-  color: white;
+  box-shadow: inset 0 -40px 0 -1px rgb(114, 112, 112);
 }
 
 /*Hero Content*/

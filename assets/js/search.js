@@ -22,8 +22,9 @@ var searchCity = function(){
   }
 
   console.log(APIvar);
-  var resultContainer = document.getElementById("result-title");
-  resultContainer.textContent = "Results";
+  var resultContainer = document.getElementById("results-div");
+  document.getElementById("result-title").textContent = "Results";
+  document.getElementById("result-title").setAttribute("style", "border-bottom: 2px solid hsl(204, 27%, 59%);")
   var loading = document.createElement("div");
   loading.className = "loader";
   resultContainer.append(loading);
