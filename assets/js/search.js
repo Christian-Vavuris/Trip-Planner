@@ -22,7 +22,7 @@ var searchCity = function(){
   }
 
   console.log(APIvar);
-  var resultContainer = document.getElementById("results");
+  var resultContainer = document.getElementById("result-title");
   resultContainer.textContent = "Results";
   var loading = document.createElement("div");
   loading.className = "loader";
@@ -41,7 +41,7 @@ var searchCity = function(){
       divEl.setAttribute("class","results");
       containerEl.append(divEl);
 
-      var divEls = document.querySelectorAll(".results");
+      var divEls = document.getElementsByClassName("results");
       divEls[i].innerHTML = "";
 
       var nameEl = document.createElement("h4");
@@ -68,6 +68,8 @@ var searchCity = function(){
       reviewcountEl.setAttribute("class","review-count");
       reviewcountEl.innerHTML = "Reviews: " + response.businesses[i].review_count;
       divEls[i].append(reviewcountEl);
+
+      divEls[i].addEventListener("click", openModal);
     }
   }); 
 };
