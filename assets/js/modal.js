@@ -1,22 +1,3 @@
-// test local storage
-var storage = [
-  {
-    place: "tripName",
-    date: "newDate",
-    desc: "desc"
-  },
-  {
-    place: "tripName",
-    date: "newDate",
-    desc: "desc"
-  },
-  {
-    place: "tripName",
-    date: "newDate",
-    desc: "desc"
-  }
-];
-
 function openModal() {
   // open the modal
   $('.modal').css('display', 'block');
@@ -29,11 +10,11 @@ function closeModal() {
   $('.modal').css('display', 'none');
 }
 
+// creates a new trip
 function createTrip() {
   var trip = $('#create')[0].value;
   console.log(trip)
   if(!localStorage.getItem(trip)) {
-    // creates a new trip
     localStorage.setItem(trip, "[]");
     var option = $('<option>')
             .text(trip)
@@ -42,6 +23,7 @@ function createTrip() {
   }
 }
 
+// creates the html content for the modal
 function modalInfo(dest) {
   if($('.modal-content')) {
     $('.modal-content').remove();
@@ -115,31 +97,32 @@ function modalInfo(dest) {
     trips.prepend(option);
   }
 
+  var footer = $('<div>').addClass('modal-footer');
   var save = $('<button>')
     .text('Save')
     .attr('id', 'save');
-  content.append(save);
+  footer.append(save);
+  content.append(footer);
 
   $("#date").datepicker({
     minDate: 1
   });
   
-  // button close closes the modal
+  // closes the modal
   $('#close').on('click', closeModal);
-  // button save calls saveTrip()
+  // button that calls saveTrip()
   $('#save').on('click', function(event) {
     saveTrip(name, address);
   });
 }
 
 function saveTrip(dest, address) {
-  console.log("test")
   // save to local storage
   var tripName = $('#trips')[0].value;
   var newDate = $('#date')[0].value;
   var desc = $('#description')[0].value;
 
-  // add lat and lon
+  // the new destination
   var newDest = {
     place: dest,
     address: address,
@@ -153,11 +136,12 @@ function saveTrip(dest, address) {
   tripInfo.push(newDest);
   localStorage.setItem(tripName, JSON.stringify(tripInfo));
 
-  // close modal
+  // close the modal
   closeModal();
+}
 
-  $('#date')[0].value = "";
-  $('#description')[0].value = "";
+if(localStorage.replaced_stats) {
+  localStorage.clear();
 }
 
 $('#open').on('click', openModal);
