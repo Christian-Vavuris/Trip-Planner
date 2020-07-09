@@ -13,6 +13,7 @@ else {
     
 }
 
+
 $('.trip').on('click', function() {
     window.location.href = "./EditPage.html?" + this.textContent;
 })
