@@ -57,7 +57,8 @@ var searchCity = function(){
 
       var addressEl = document.createElement("p");
       addressEl.setAttribute("class","address");
-      addressEl.innerHTML = response.businesses[i].location.city + ", " + response.businesses[i].location.state;
+      // addressEl.innerHTML = response.businesses[i].location.city + ", " + response.businesses[i].location.state;
+      addressEl.innerHTML = response.businesses[i].location.city;
       divEls[i].append(addressEl);
 
       var ratingEl = document.createElement("p");

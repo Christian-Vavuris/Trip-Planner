@@ -89,6 +89,7 @@ function modalInfo(dest) {
   $('#create-btn').on('click', function() {
     createTrip();
   });
+  
   var trips = $('#trips');
   for(var i = 0; i < localStorage.length; i++) {
     var option = $('<option>')
