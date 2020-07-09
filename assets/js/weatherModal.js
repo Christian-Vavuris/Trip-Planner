@@ -9,22 +9,19 @@ function callAPI(url, callBack) {
 }
 
 function openModal(place) {
-    console.log(place);
     $('.modal').css('display', 'block');
-    // $('.modal').addClass('show-modal');
+    // place = "Novato, "
 
-    var placeInfo = JSON.parse(localStorage.getItem(place.textContent));
-    $('#title').text(placeInfo.place);
+    $('#title').text(place);
 
     // TODO: probably change out API ID to use the same as the other one
-    var url = `https://api.openweathermap.org/data/2.5/weather?appid=640b3bbebec045da381544940d161ab8&q=${placeInfo.location}&units=imperial`;
+    var url = `https://api.openweathermap.org/data/2.5/weather?appid=640b3bbebec045da381544940d161ab8&q=${place}&units=imperial`;
     callAPI(url, weatherInfo);
 }
 
 function closeModal() {
     // close the modal
     $('.modal').css('display', 'none');
-    // $('.modal').removeClass('show-modal');
 }
 
 function weatherInfo(data) {
@@ -37,4 +34,4 @@ function weatherInfo(data) {
 }
 
 $('.close').on('click', closeModal);
-$('.open').on('click', openModal);
+// $('.open').on('click', openModal);
