@@ -24,7 +24,7 @@
   </header>
   <section class="user-input">
     <div>
-      <label for="city-button">Enter a city:</label>
+      <label for="city-button">Enter a city: </label>
       <input type="text"  id="city-input" placeholder="City"/>
     </div>
     <div>
@@ -36,11 +36,19 @@
       </select>
     </div>
     <div>
+      <!-- a better way to implement the category section would be using yelp fusion
+      autocomplete instead of dropdown but for MVP it works -->
       <label for="categories">Categories: </label>
       <select id="category" name="categories">
         <option value="restaurants">Restaurants</option>
         <option value="parks">Parks</option>
-        <option value="donuts">Donuts</option>
+        <option value="beaches">Beaches</option>
+        <option value="zoos">Zoos</option>
+        <option value="galleries">Art Galleries</option>
+        <option value="movietheaters">Cinema</option>
+        <option value="shoppingcenters">Shopping Centers</option>
+        <option value="festivals">Festivals</option>
+        <option value="bars">Bars</option>
       </select>
     </div>
     <button id="search-button">Search</button>

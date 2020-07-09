@@ -52,7 +52,7 @@ var searchCity = function(){
 
       var imgEl = document.createElement("img");
       imgEl.setAttribute("src", response.businesses[i].image_url);
-      imgEl.setAttribute("class","u-max-full-width" )
+      imgEl.setAttribute("class","u-max-full-width");
       divEls[i].append(imgEl);
 
       var addressEl = document.createElement("p");
