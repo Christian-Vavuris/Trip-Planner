@@ -14,6 +14,7 @@ else {
 }
 
 $('.trip').on('click', function(event) {
+    getTrips(this.textContent);
     window.location.href = "./EditPage.html";
-    getTrips(this);
+
 })

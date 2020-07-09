@@ -9,6 +9,7 @@ function callAPI(url, callBack) {
 }
 
 function openModal(place) {
+    console.log(place);
     $('.modal').css('display', 'block');
     // $('.modal').addClass('show-modal');
 
