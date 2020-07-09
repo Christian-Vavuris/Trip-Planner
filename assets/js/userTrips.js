@@ -1,8 +1,20 @@
+function deleteTrip() {
+    var trip = this.previousElementSibling.textContent;
+    localStorage.removeItem(trip);
+    $(this)[0].parentElement.remove();
+}
+
 if(localStorage.length !== 0) {
     for(i = 0; i < localStorage.length; i++) {
         var trip = $('<div>')
-        .addClass('trip')
-        .text(localStorage.key(i));
+        .addClass('trip');
+
+        var tripName = $('<p>')
+            .text(localStorage.key(i));
+        var btn = $('<button>')
+            .text('Delete')
+            .on('click', deleteTrip);
+        trip.append(tripName, btn)
 
         $('.trips').append(trip);
     }
@@ -14,6 +26,6 @@ else {
 }
 
 
-$('.trip').on('click', function() {
+$('p').on('click', function() {
     window.location.href = "./EditPage.html?" + this.textContent;
 })
