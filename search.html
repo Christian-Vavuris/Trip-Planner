@@ -7,56 +7,53 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
   <link rel="stylesheet" href="assets/css/normalize.css">
   <link rel="stylesheet" href="assets/css/skeleton.css">
+  <link rel="stylesheet" href="assets/css/index.css">
   <link rel="stylesheet" href="./assets/css/modalstyles.css">
   <link rel="stylesheet" href="assets/css/search.css">
 </head>
 <body>
-  <label for="city-button">Enter a city</label>
-  <input type="text"  id="city-input" placeholder="City"/>
-  <label for="sort-select">Sort by: </label>
-  <select id="sort-type" name="sort-select">
-    <option value="rating">Rating</option>
-    <option value="best_match">Most relevant</option>
-    <option value="review_count">Reviews</option>
-  </select>
-  <label for="categories">Categories: </label>
-  <select id="category" name="categories">
-    <option value="restaurants">Restaurants</option>
-    <option value="parks">Parks</option>
-    <option value="donuts">Donuts</option>
-  </select>
-  <button id="search-button">Search</button>
+  <header>
+    <h1><a href="./index.html">Vacation Planner</a></h1>
+    <nav>
+      <ul>
+        <li><a href="./search.html">Get Started</a></li>
+        <li><a href="./userTrips.html">My Trips</a></li>
+        <li><a href="./index.html#weather-forecast">Weather Forecast</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="user-input">
+    <div>
+      <label for="city-button">Enter a city:</label>
+      <input type="text"  id="city-input" placeholder="City"/>
+    </div>
+    <div>
+      <label for="sort-select">Sort by: </label>
+      <select id="sort-type" name="sort-select">
+        <option value="rating">Rating</option>
+        <option value="best_match">Most relevant</option>
+        <option value="review_count">Reviews</option>
+      </select>
+    </div>
+    <div>
+      <label for="categories">Categories: </label>
+      <select id="category" name="categories">
+        <option value="restaurants">Restaurants</option>
+        <option value="parks">Parks</option>
+        <option value="donuts">Donuts</option>
+      </select>
+    </div>
+    <button id="search-button">Search</button>
+  </section>
 
-  <h2 id="result-title"></h2>
-  <section>
+  <section id="results-div">
+    <h2 id="result-title"></h2>
     <div id="result-container"></div>
   </section>
 
   <div class="modal">
-    <div class="modal-content">
-        <div class="modal-header">
-          <h2 id="title"></h2>
-          <button id="close">&times;</button>
-        </div>
-
-        <label for="my-trips">Choose a trip:</label>
-        <select name="my-trips" id="trips"></select>
-          
-        <label for="create-btn">Create a New Trip:</label>
-        <input type="text"  id="create" placeholder="New Trip"/>
-        <button id="create-btn">Create</button>
-
-        <label for="date">Date: </label>
-        <input type="text" id="date" placeholder="MM/DD/YYYY" autocomplete="off"/>
-
-        <label for="description">Add a Description: </label>
-        <textarea id="description"></textarea>
-
-        <div class="modal-footer">
-            <button id="save">Save</button>
-        </div>
-    </div>
-</div>
+    <div class="modal-content"></div>
+  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>

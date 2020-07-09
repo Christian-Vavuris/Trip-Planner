@@ -25,13 +25,16 @@
   width: 50%;
 }
 
-/* The Close Button */
 .modal-header {
   color: #aaaaaa;
   display: flex;
   justify-content: flex-end;
   font-size: 28px;
   font-weight: bold;
+}
+
+#title {
+  margin: auto;
 }
 
 .close:hover,
@@ -43,4 +46,8 @@
 
 input {
   text-align: center;
+}
+
+.modal-footer {
+  padding: 0 37%;
 }

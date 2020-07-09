@@ -30,12 +30,19 @@ localStorage.setItem("trips", JSON.stringify(storedTrips));
 
 }
 
+function getTripName() {
+    var path = window.location.href;
+    var tripName = path.split('?')[1];
+    tripName = tripName.replace('%20', ' ');
+    console.log(tripName);
+    getTrips(tripName);
+}
 
 // Pull down the Array from local storage or create an empty one
 // Parse the array 
 
-var getTrips = function (dest) {
-    console.log(dest)
+
+function getTrips (dest) {
     var storedTrips = localStorage.getItem(dest);
     let workingArray;
     if (storedTrips === null) {
@@ -45,11 +52,13 @@ var getTrips = function (dest) {
         workingArray = JSON.parse(storedTrips)
     }
     trips = workingArray
+    displayTrips();
 }
 
 // Display contents of the array to a card on the HTML Page
 
 var displayTrips = function () {
+    console.log("display")
     for (i=0; i<trips.length; i++) {
     var cityCard = document.createElement("Div")
     cityCard.innerHTML = "<h2>" + trips[i].place + "</h2> <input class='date-button' placeholder="+ trips[i].date + "></input> <h3>" + trips[i].desc + "<h3/><button class='open'>"+ trips[i].address + "</button>";
@@ -71,10 +80,10 @@ var changeDate = function() {
 // testLocalStorageData();
 
 testLocalStorageData();
-getTrips("trips");
-displayTrips();
-console.log(trips);
-$(".date-button").on('click', changeDate);
+
 $(".open").on("click", function(){
     openModal(this);
 })
+
+getTripName();
+$(".date-button").on('click', changeDate);

@@ -1,0 +1,19 @@
+body {
+    text-align: center;
+}
+
+h1 {
+    width: 50%;
+    margin: 3rem auto;
+    font-size: 3rem;
+    border-bottom: 2px solid hsl(204, 27%, 59%);
+}
+
+.trip {
+    font-size: 25px;
+    padding: 5px;
+}
+
+.trip:hover {
+    color: hsl(204, 27%, 59%);
+}

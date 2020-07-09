@@ -1,71 +1,111 @@
-
 header {
-    color: #000000;
+    color: #ffffff;
+    background-color: hsl(204, 27%, 59%);
     font-weight: 700;
     font-style: bold;
-    text-align: center;
-  }
-  
-  /*Hero Content*/
-  .hero {
-    padding: 0;
-    min-height: 500px;
-    text-align: center;
-    position: relative;
-    background-color: #d56d4d; /* layer fill content */
-    color: black;
-  }
-  .hero-image {
-    background: url("../images/beach-pic.jpg") no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
-    position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
-  }
-  .hero-text {
-    border: 5px inset hsl(204, 27%, 59%);
-    border-radius: 15px 15px 15px 15px;
-    background: rgba(190,208,224,0.37) none no-repeat fixed 0px 0px;
-  }
+    padding: 20px 35px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 
-  /* Personal Flavour */
+header h1 a {
+  font-weight: bold;
+  margin: 0;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+header h1 a:hover {
+  color: #ffffff;
+}
+
+header nav {
+  margin: 2.5rem 0 0 0;
+}
+
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+header nav ul li {
+  display: inline;
+}
+
+header nav ul li a {
+  padding: 10px 15px;
+  font-size: 1.55vw;
+  color: white;
+}
+
+header nav ul li a:hover {
+  box-shadow: inset 0 -40px 0 -1px rgb(114, 112, 112);
+}
+
+/*Hero Content*/
+.hero {
+  padding: 0;
+  min-height: 500px;
+  text-align: center;
+  position: relative;
+  background-color: #d56d4d; /* layer fill content */
+  color: black;
+}
+.hero-image {
+  background: url("../images/beach-pic.jpg") no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+}
+.hero-text {
+  border: 5px inset hsl(204, 27%, 59%);
+  border-radius: 15px 15px 15px 15px;
+  background: rgba(190,208,224,0.37) none no-repeat fixed 0px 0px;
+  margin: 5rem;
+}
+
+/* Personal Flavour */
 * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 /* Button inverted */
- 
+
 .button.inverted {
-    font-size: inherit;
-    padding: 15px 40px;
-    color: white;
-    background-color: grey;
-    height: auto;
-    border: 3px solid white;
-    text-transform: none;
-    font-size: 26px;
-    font-family: "ambleregular";
-  }
-   
+  font-size: inherit;
+  padding: 15px 40px;
+  color: white;
+  background-color: grey;
+  height: auto;
+  border: 3px solid white;
+  text-transform: none;
+  font-size: 26px;
+  font-family: "ambleregular";
+}
+  
 .button.inverted:hover {
-    background: white;
-    color: #222;
-  }
+  background: white;
+  color: #222;
+}
 
 /* =Section general styling
 -------- */
- 
+
 section {
-    text-align: center;
-    padding: 80px 0;
+  text-align: center;
+  padding: 80px 0;
 }
 
 .search-form {
-    background: #D0E4F5 url("../images/paris-streets.jpg") no-repeat scroll 1px -50px;
+  background: #D0E4F5 url("../images/paris-streets.jpg") no-repeat scroll 1px -50px;
 }
 
 
-  
