@@ -6,6 +6,11 @@ html{
     scroll-behavior: smooth;
 }
 
+.title {
+    font-style: italic;
+    font-weight: bolder;
+}
+
 .nav-link {
     color: white;
     text-decoration: none;
@@ -20,4 +25,11 @@ html{
     border: 2px solid black;
     border-radius: 10px;
     margin: 10px 5% 10px 5%;
+    background-color: rgb(223, 182, 106);
+}
+
+.grid-container {
+    background: #D8EDFF url("https://cdn.insuremytrip.com/resources/29337/spain_travel_insurance_seville.jpg") no-repeat scroll 50% 50%;
+    background-size: cover;
+    padding: 10px;
 }

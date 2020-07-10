@@ -60,6 +60,7 @@ html {
 #result-container {
   margin: 3rem;
   border-style: double;
+  background-color: rgb(223, 182, 106);
 }
 
 img {
