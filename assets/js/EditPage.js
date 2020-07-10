@@ -5,26 +5,7 @@ var trips = []
 // These are test values for the array until I figure out how to link to Sara's storage
 
 var testLocalStorageData = function () {
-storedTrips = [
-    {
-        place: "Madrid",
-        date: "07/25/2021",
-        desc: "I'm going to visit the King's Palace",
-        address: "Novato"
-    },
-    {
-        place: "Budapest",
-        date: "07/25/2021",
-        desc: "Lets go to the Club!",
-        address: "San Francisco"
-    },
-    {
-        place: "Stockholm",
-        date: "07/25/2021",
-        desc: "I've always wanted to try pickled herring",
-        address: "New York"
-    }
-]
+
 
 localStorage.setItem("trips", JSON.stringify(storedTrips));
 
