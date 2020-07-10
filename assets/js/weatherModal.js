@@ -1,3 +1,4 @@
+// calls the weather API
 function callAPI(url, callBack) {
     fetch(url).then(function(response) {
         if(response.ok) {
@@ -8,22 +9,22 @@ function callAPI(url, callBack) {
     })
 }
 
+// open the modal
 function openModal(place) {
     $('.modal').css('display', 'block');
-    // place = "Novato, "
 
     $('#title').text(place);
 
-    // TODO: probably change out API ID to use the same as the other one
     var url = `https://api.openweathermap.org/data/2.5/weather?appid=640b3bbebec045da381544940d161ab8&q=${place}&units=imperial`;
     callAPI(url, weatherInfo);
 }
 
+// close the modal
 function closeModal() {
-    // close the modal
     $('.modal').css('display', 'none');
 }
 
+// modal content
 function weatherInfo(data) {
     $('#temp').text(`Temperature: ${data.main.temp}°F`);
     $('#icon').attr('src', `http://openweathermap.org/img/w/${data.weather[0].icon}.png`);
@@ -34,4 +35,3 @@ function weatherInfo(data) {
 }
 
 $('.close').on('click', closeModal);
-// $('.open').on('click', openModal);
