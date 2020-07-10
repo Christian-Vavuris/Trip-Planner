@@ -1,19 +1,20 @@
+// open the modal
 function openModal() {
-  // open the modal
   $('.modal').css('display', 'block');
 
   modalInfo(this);
 }
 
+// close the modal
 function closeModal() {
-  // close the modal
   $('.modal').css('display', 'none');
 }
 
 // creates a new trip
 function createTrip() {
   var trip = $('#create')[0].value;
-  console.log(trip)
+  $('#create')[0].value = "";
+
   if(!localStorage.getItem(trip)) {
     localStorage.setItem(trip, "[]");
     var option = $('<option>')
@@ -29,10 +30,15 @@ function modalInfo(dest) {
     $('.modal-content').remove();
   }
 
+  // get the selected place info
   var name = dest.children[0].textContent;
   var address = dest.children[2].textContent;
+  
+  // create the modal html content
   var content = $('<div>').addClass('modal-content');
   $('.modal').append(content);
+
+  // modal header
   var header = $('<div>').addClass('modal-header');
   var title = $('<h2>')
     .text(name)
@@ -40,56 +46,36 @@ function modalInfo(dest) {
   var close = $('<button>')
     .text('X')
     .attr('id', 'close');
-  header.append(title);
-  header.append(close);
+  header.append(title, close);
   content.append(header);
 
-  var chooseLabel = $('<label>')
-    .text('Choose a trip:')
-    .attr('for', 'my-trips');
-  var selectTrip = $('<select>')
-    .attr('name', 'my-trips')
-    .attr('id', 'trips');
-  content.append(chooseLabel);
-  content.append(selectTrip);
-
+  // create a new trip
   var createLabel = $('<label>')
-    .attr('for', 'create-btn')
-    .text('Create a New Trip:');
+  .attr('for', 'create-btn')
+  .text('Create a New Trip:');
   var createInput = $('<input>')
-    .attr('type', 'text')
-    .attr('id', 'create')
-    .attr('placeholder', 'New Trip');
+  .attr('type', 'text')
+  .attr('id', 'create')
+  .attr('placeholder', 'New Trip');
   var createBtn = $('<button>')
-    .attr('id', 'create-btn')
-    .text('Create');
-  content.append(createLabel);
-  content.append(createInput);
-  content.append(createBtn);
-
-  var dateLabel = $('<label>')
-    .attr('for', 'date')
-    .text('Date:');
-  var dateInput = $('<input>')
-    .attr('type', 'text')
-    .attr('id', 'date')
-    .attr('placeholder', 'MM/DD/YYYY')
-    .attr('autocomplete', 'off');
-  content.append(dateLabel);
-  content.append(dateInput);
-
-  var descLabel = $('<label>')
-    .attr('for', 'description')
-    .text('Add a Description:');
-  var desc = $('<textarea>')
-    .attr('id', 'description');
-  content.append(descLabel);
-  content.append(desc);
+  .attr('id', 'create-btn')
+  .text('Create');
+  content.append(createLabel, createInput, createBtn);
 
   $('#create-btn').on('click', function() {
     createTrip();
   });
-  
+
+  // choose a trip
+  var chooseLabel = $('<label>')
+  .text('Choose a trip:')
+  .attr('for', 'my-trips');
+  var selectTrip = $('<select>')
+  .attr('name', 'my-trips')
+  .attr('id', 'trips');
+  content.append(chooseLabel, selectTrip);
+
+  // get stored trips for the dropdown
   var trips = $('#trips');
   for(var i = 0; i < localStorage.length; i++) {
     var option = $('<option>')
@@ -98,6 +84,30 @@ function modalInfo(dest) {
     trips.prepend(option);
   }
 
+  // date picker
+  var dateLabel = $('<label>')
+    .attr('for', 'date')
+    .text('Date:');
+  var dateInput = $('<input>')
+    .attr('type', 'text')
+    .attr('id', 'date')
+    .attr('placeholder', 'MM/DD/YYYY')
+    .attr('autocomplete', 'off');
+  content.append(dateLabel, dateInput);
+
+  $("#date").datepicker({
+    minDate: 1
+  });
+
+  // description textarea
+  var descLabel = $('<label>')
+    .attr('for', 'description')
+    .text('Add a Description:');
+  var desc = $('<textarea>')
+    .attr('id', 'description');
+  content.append(descLabel, desc);
+
+  // modal footer
   var footer = $('<div>').addClass('modal-footer');
   var save = $('<button>')
     .text('Save')
@@ -105,9 +115,6 @@ function modalInfo(dest) {
   footer.append(save);
   content.append(footer);
 
-  $("#date").datepicker({
-    minDate: 1
-  });
   
   // closes the modal
   $('#close').on('click', closeModal);
@@ -117,8 +124,8 @@ function modalInfo(dest) {
   });
 }
 
+// save the trip to local storage
 function saveTrip(dest, address) {
-  // save to local storage
   var tripName = $('#trips')[0].value;
   var newDate = $('#date')[0].value;
   var desc = $('#description')[0].value;
@@ -139,10 +146,6 @@ function saveTrip(dest, address) {
 
   // close the modal
   closeModal();
-}
-
-if(localStorage.replaced_stats) {
-  localStorage.clear();
 }
 
 $('#open').on('click', openModal);
