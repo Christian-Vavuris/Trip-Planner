@@ -140,7 +140,6 @@ function saveTrip(dest, address) {
 
   // update the trip
   var tripInfo = JSON.parse(localStorage.getItem(tripName));
-  console.log(tripInfo)
   tripInfo.push(newDest);
   localStorage.setItem(tripName, JSON.stringify(tripInfo));
 

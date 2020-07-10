@@ -8,8 +8,6 @@ var searchCity = function(){
   var sort = document.getElementById("sort-type").value;
   var category = document.getElementById("category").value;
 
-  console.log(cityInput, sort, category);
-
   // create the API call
   var APIvar = {
     "async": true,
@@ -21,7 +19,6 @@ var searchCity = function(){
     }
   }
 
-  console.log(APIvar);
   var resultContainer = document.getElementById("results-div");
   document.getElementById("result-title").textContent = "Results";
   document.getElementById("result-title").setAttribute("style", "border-bottom: 2px solid hsl(204, 27%, 59%);")
@@ -32,7 +29,6 @@ var searchCity = function(){
 
   // call the API
   $.ajax(APIvar).done(function (response) {
-    console.log(response);
     resultContainer.removeChild(loading);
 
     // create the info
@@ -57,7 +53,6 @@ var searchCity = function(){
 
       var addressEl = document.createElement("p");
       addressEl.setAttribute("class","address");
-      // addressEl.innerHTML = response.businesses[i].location.city + ", " + response.businesses[i].location.state;
       addressEl.innerHTML = response.businesses[i].location.city;
       divEls[i].append(addressEl);
 
