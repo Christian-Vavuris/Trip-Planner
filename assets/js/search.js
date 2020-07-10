@@ -45,15 +45,15 @@ var searchCity = function(){
       var divEls = document.getElementsByClassName("results");
       divEls[i].innerHTML = "";
 
+      var imgEl = document.createElement("img");
+      imgEl.setAttribute("src", response.businesses[i].image_url);
+      imgEl.setAttribute("class","result-img u-max-full-width");
+      divEls[i].append(imgEl);
+
       var nameEl = document.createElement("h4");
       nameEl.setAttribute("class","name");
       nameEl.innerHTML = response.businesses[i].name;
       divEls[i].append(nameEl);
-
-      var imgEl = document.createElement("img");
-      imgEl.setAttribute("src", response.businesses[i].image_url);
-      imgEl.setAttribute("class","u-max-full-width");
-      divEls[i].append(imgEl);
 
       var addressEl = document.createElement("p");
       addressEl.setAttribute("class","address");
