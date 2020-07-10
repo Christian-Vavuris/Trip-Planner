@@ -26,9 +26,9 @@
     <h1><a href="./index.html">Vacation Planner</a></h1>
     <nav>
       <ul>
-        <li><a href="./search.html">Get Started</a></li>
-        <li><a href="./userTrips.html">My Trips</a></li>
-        <li><a href="#weather-forecast">Weather Forecast</a></li>
+        <li><button><a href="./search.html" class="nav-link">Get Started</a></button></li>
+        <li><button><a href="./userTrips.html" class="nav-link">My Trips</a></button></li>
+        <li><button><a href="#weather-forecast" class="nav-link">Weather Forecast</a></button></li>
       </ul>
     </nav>
   </header>
@@ -40,13 +40,13 @@
     <div class="container centered">
       <div class="twelve columns hero-text" id="section1">
         <h4>Search for a city of your choice and find the weather forecast as well as nearby attractions and activities. Once you've found your destination of choice, you may save your trip!</h4>
-        <button class="button inverted"><a href="./search.html">Get Started</a></button>
+        <button class="button inverted"><a href="./search.html" class="nav-link">Get Started</a></button>
       </div>
     </div>
   </section>
 
  <!-- weather content-->
- <section class="twelve columns">
+ <section class="twelve columns weather-form">
   <!-- current weather card-->
   <h3 class="text-light font-weight-bold" id="weather-forecast">Weather Dashboard</h3>
 
@@ -233,7 +233,9 @@
     ></script>
     <script src="assets/js/weather.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</body>
 </html>
 
 </main>

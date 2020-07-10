@@ -1,3 +1,41 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.nav-link-search {
+  color: black;
+  text-decoration: none;
+}
+
+.nav-link-search:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.heading {
+  padding: 10px;
+}
+.city-heading {
+  border: 3px dotted #02070B;
+  border-radius: 10px;
+}
+
+.yelp-logo img {
+  height: 75px;
+  width: 150px;
+}
+
+
 .user-input {
   display: flex;
   flex-wrap: wrap;
@@ -21,6 +59,7 @@
 
 #result-container {
   margin: 3rem;
+  border-style: double;
 }
 
 img {
