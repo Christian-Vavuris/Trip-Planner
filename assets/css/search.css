@@ -30,11 +30,10 @@ html {
   border-radius: 10px;
 }
 
-.yelp-logo img {
+.yelp-logo-img {
   height: 75px;
   width: 150px;
 }
-
 
 .user-input {
   display: flex;
@@ -61,11 +60,19 @@ html {
   margin: 3rem;
   border-style: double;
   background-color: rgb(223, 182, 106);
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0,0,0,.5);
 }
 
 img {
-  width: 20%;
-  height: 20%;
+  width: 30%;
+  height: 30%;
+  flex: 0 0 30%;
+}
+
+p {
+  margin: 0;
+  padding: 10px 0 0;
 }
 
 .loader {
@@ -81,4 +88,12 @@ img {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+
+@media (max-width: 991px)
+{
+  #result-container {
+    flex-direction: column;
+  }
 }
