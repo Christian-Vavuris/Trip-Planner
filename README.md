@@ -77,6 +77,8 @@ If a user would like to quickly just check a city's weather, they can scroll dow
 * `index.css`
 
 # Contributors
+Here is a list of contributors and the files each person was in charge of. (**Note:** This list omits files that a contributor may have worked on, but was not in charge of.)
+
 ## [shhu21](https://github.com/shhu21)
 * `modal.js`
 * `weatherModal.js`
