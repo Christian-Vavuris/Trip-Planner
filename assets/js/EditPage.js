@@ -11,19 +11,22 @@ localStorage.setItem("trips", JSON.stringify(storedTrips));
 
 }
 
+// local storage key
+var dest = "";
+
 function getTripName() {
     var path = window.location.href;
     var tripName = path.split('?')[1];
-    tripName = tripName.replace('%20', ' ');
+    dest = tripName.replace('%20', ' ');
     console.log(tripName);
-    getTrips(tripName);
+    getTrips();
 }
 
 // Pull down the Array from local storage or create an empty one
 // Parse the array 
 
 
-function getTrips (dest) {
+function getTrips () {
     var storedTrips = localStorage.getItem(dest);
     let workingArray;
     if (storedTrips === null) {
@@ -41,14 +44,19 @@ function getTrips (dest) {
 var displayTrips = function () {
     console.log("display")
     for (i=0; i<trips.length; i++) {
-        var cityCard = document.createElement("Div")
-        cityCard.innerHTML = "<h2>" + trips[i].place + "</h2> <input class='date-button' placeholder="+ trips[i].date + "></input> <h3>" + trips[i].desc + "<h3/><button class='open'>"+ trips[i].address + "</button>";
+        var cityCard = document.createElement("Div");
+        cityCard.className = "city-card";
+        cityCard.innerHTML = "<h2>" + trips[i].place + "</h2> <input class='date-button' placeholder=" + trips[i].date + "></input> <button class='edit-btn'>Save</button> <h3>" + trips[i].desc + "<h3/><button class='open'>"+ trips[i].address + "</button>";
 
         
         cityCard.classList.add("city-card")
         document.getElementById("grid").appendChild(cityCard);
     }
     
+    $(".date-button").datepicker({
+        minDate: 1
+    });
+
     $(".open").on("click", function(){
         openModal(this.textContent);
     })
@@ -56,10 +64,19 @@ var displayTrips = function () {
 
 
 // Edit the dates and save them to the array
-
 var changeDate = function() {
-    $(".date-button").datepicker();
-    // console.log("foo");
+    var itinerary = JSON.parse(localStorage.getItem(dest));
+    var place = this.previousElementSibling.previousElementSibling;
+
+    for(var i = 0; i < itinerary.length; i++) {
+        if(itinerary[i].place == place.textContent) {
+            itinerary[i].date = this.previousElementSibling.value;
+            place.placeholder = this.previousElementSibling.value
+            break;
+        }
+    }
+    
+    localStorage.setItem(dest, JSON.stringify(itinerary));
 }
 
 // Push back to local storage with new datees
@@ -69,4 +86,4 @@ var changeDate = function() {
 testLocalStorageData();
 
 getTripName();
-$(".date-button").on('click', changeDate);
+$(".edit-btn").on('click', changeDate);
