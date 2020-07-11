@@ -8,6 +8,9 @@ __*Live URL:*__  https://christian-vavuris.github.io/trip-planner/
   * [Getting Started](#getting-started)
   * [Search a city](#search-a-city)
   * [Creating and adding to trips](#creating-and-adding-to-trips)
+  * [View My Trips](#view-my-trips)
+  * [View a Trip](#view-a-trip)
+  * [Weather Forecast](#weather-forecast)
 - [File Breakdown](#file-breakdown)
   * [Landing Page](#landing-page)
   * [Search Page](#search-page)
@@ -77,7 +80,7 @@ If a user would like to quickly just check a city's weather, they can scroll dow
 * `index.css`
 
 # Contributors
-Here is a list of contributors and the files each person was in charge of. (**Note:** This list omits files that a contributor may have worked on, but was not in charge of.)
+Here is a list of contributors and the files each person was in charge of. (**Note:** This is not a work history list, please see the commit history to see the work progress.)
 
 ## [shhu21](https://github.com/shhu21)
 * `modal.js`
