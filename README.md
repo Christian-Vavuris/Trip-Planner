@@ -26,7 +26,7 @@ __*Live URL:*__  https://christian-vavuris.github.io/trip-planner/
 
 # Overview
 Trip Planner is an application that helps a user plan the perfect trip. It allows a user to search a city and create an itinerary, where they can view current weather and future weather conditions.  Our objective was to make something that is easy to use and gives the user the most relevant information regarding their upcoming trips. In addition to getting necessary information the user needs, our site stores the data locally so that the user can leave the page without worring about losing their planned trips. 
-</br>
+</br></br>
 This application was built with Skeleton Framework, HTML, CSS, JQuery, Javascript, AJAX, JSON, along with the use of two API's, Open Weather Map and Yelp Fusion, to get the weather and local buisnesses information, respectfully.
 
 # User's Guide
