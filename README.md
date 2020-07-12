@@ -22,7 +22,6 @@ __*Live URL:*__  https://christian-vavuris.github.io/trip-planner/
   * [tmcelyea93](#tmcelyea93)
   * [Maximo100100](#maximo100100)
   * [zal-7](#zal-7)
-- [Known Bugs](#known-bugs)
 - [Website Preview](#website-preview)
 
 # Overview
@@ -45,7 +44,7 @@ To add a Yelp Listing to a trip, click on the trip to open the save modal.  If t
 The user may view all created trips by navigating to the `My Trips` page from the navigation bar. A trip may be deleted by clicking on the `Delete` button or viewed by clicking on the trip name.
 
 ## View a Trip
-When a user chooses to view a trip, they have the option of editing the date of the places they have saved to it.  The date may be changed by clicking on the displayed date.  A user may click on the city name to view the current weather information of that city.
+When a user chooses to view a trip, they have the option of editing the date of the places they have saved to it.  The date may be changed by clicking on the displayed date and saved by clicking the `Save` button.  A user may click on the city name to view the current weather information of that city.
 
 ## Weather Forecast
 If a user would like to quickly just check a city's weather, they can scroll down to find the Weather Dashboard or navigate there via the `Weather Forecast` link in the navigation bar.
@@ -105,8 +104,6 @@ Here is a list of contributors and the files each person was in charge of. (**No
 
 ## [zal-7](https://github.com/zal-7/)
 * `weather.js`
-
-# Known Bugs
 
 # Website Preview
 ![Gif](https://github.com/Christian-Vavuris/Trip-Planner/blob/readme/gif/assets/images/Vacation.gif)
