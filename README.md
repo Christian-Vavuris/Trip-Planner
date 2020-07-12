@@ -106,4 +106,4 @@ Here is a list of contributors and the files each person was in charge of. (**No
 * `weather.js`
 
 # Website Preview
-![Gif](https://github.com/Christian-Vavuris/Trip-Planner/blob/readme/gif/assets/images/Vacation.gif)
+![](./assets/images/trip-planner.png)
