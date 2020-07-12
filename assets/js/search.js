@@ -41,30 +41,34 @@ var searchCity = function(){
       var divEls = document.getElementsByClassName("results");
       divEls[i].innerHTML = "";
 
-      var nameEl = document.createElement("h4");
-      nameEl.setAttribute("class","name");
-      nameEl.innerHTML = response.businesses[i].name;
-      divEls[i].append(nameEl);
+      var descDiv = document.createElement("div");
+      descDiv.className = "place-desc";
 
       var imgEl = document.createElement("img");
       imgEl.setAttribute("src", response.businesses[i].image_url);
       imgEl.setAttribute("class","u-max-full-width");
       divEls[i].append(imgEl);
 
+      var nameEl = document.createElement("h4");
+      nameEl.setAttribute("class","name");
+      nameEl.innerHTML = response.businesses[i].name;
+      descDiv.append(nameEl);
+      
       var addressEl = document.createElement("p");
       addressEl.setAttribute("class","address");
       addressEl.innerHTML = response.businesses[i].location.city;
-      divEls[i].append(addressEl);
-
+      descDiv.append(addressEl);
+      
       var ratingEl = document.createElement("p");
       ratingEl.setAttribute("class","rating");
       ratingEl.innerHTML = "Rating: " + response.businesses[i].rating;
-      divEls[i].append(ratingEl);
-
+      descDiv.append(ratingEl);
+      
       var reviewcountEl = document.createElement("p");
       reviewcountEl.setAttribute("class","review-count");
       reviewcountEl.innerHTML = "Reviews: " + response.businesses[i].review_count;
-      divEls[i].append(reviewcountEl);
+      descDiv.append(reviewcountEl);
+      divEls[i].append(descDiv);
 
       divEls[i].addEventListener("click", openModal);
     }
