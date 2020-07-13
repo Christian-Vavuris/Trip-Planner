@@ -63,14 +63,13 @@ var searchCity = function(){
       ratingEl.setAttribute("class","rating");
       ratingEl.innerHTML = "Rating: " + response.businesses[i].rating;
       descDiv.append(ratingEl);
+      descDiv.addEventListener("click", openModal);
       
       var reviewcountEl = document.createElement("p");
       reviewcountEl.setAttribute("class","review-count");
       reviewcountEl.innerHTML = "Reviews: " + response.businesses[i].review_count;
       descDiv.append(reviewcountEl);
       divEls[i].append(descDiv);
-
-      divEls[i].addEventListener("click", openModal);
     }
   }); 
 };
