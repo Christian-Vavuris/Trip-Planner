@@ -32,7 +32,8 @@ function modalInfo(dest) {
 
   // get the selected place info
   var name = dest.children[0].textContent;
-  var address = dest.children[0].textContent;
+  var address = dest.children[1].textContent; 
+
   
   // create the modal html content
   var content = $('<div>').addClass('modal-content');
