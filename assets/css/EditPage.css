@@ -33,3 +33,18 @@ html{
     background-size: cover;
     padding: 10px;
 }
+
+@media screen and (max-width:575px) {
+
+    ul {
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+
+    }
+
+    li {
+        width:33%;
+
+    }
+}
